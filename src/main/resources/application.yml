@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: spring-ai-tutorial
+  config:
+    import: optional:file:.env[.properties]
+
+  ai:
+    openai:
+      api-key: ${OPEN_AI_API_KEY}
