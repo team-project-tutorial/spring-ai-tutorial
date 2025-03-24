@@ -1,6 +1,7 @@
-# 개요
+Spring AI를 이용한 Chat GPT 연동 및 배송지 목록 정렬 예제 
+===
 
-# 목표
+## 목표
 
 - Spring AI를 이용하여 Chat GPT와 통신하기 위한 방법을 숙지합니다.
 - Spring AI의 ChatClient를 활용하여 배송지 순서를 지정하는 예제를 구현합니다.
@@ -16,6 +17,8 @@
 #### User Message
 
 > AI에 작업 전달을 위한 User Message 설정 : prompt
+
+---
 
 # TODO
 
@@ -48,6 +51,8 @@
 - [ ] **테스트 코드 작성**
     - [ ] `GET /api/chat/basic` API 동작을 검증하는 통합 테스트 작성 및 실행
 
+---
+
 ## Step2. 구체적인 답변을 위해 System Message를 이용한 AI 모델의 역할 부여
 
 - [ ] **ChatClient Configuration 설정**
@@ -65,6 +70,8 @@
 
 - [ ] **테스트 코드 작성**
     - [ ] `GET /api/chat/role` API 동작을 검증하는 통합 테스트 작성 및 실행
+
+---
 
 ## Step 3: ChatClient를 활용한 배송지 정렬 기능 구현
 
@@ -123,7 +130,7 @@ dependencyManagement {
 
 ```
 
-### Spring AI 의존성을 통해 Chat GPT와 연동하기 위해 필요한 API Key는 아래와 같이 설정할 수 있어요
+### Spring AI 의존성을 통해 Chat GPT와 연동하기 위해 필요한 API Key는 아래와 같이 설정할 수 있어요.
 
 ```yml
 spring:
@@ -135,7 +142,7 @@ spring:
       api-key: ${OPEN_AI_API_KEY}
 ```
 
-### Spring AI의 ChatClient를 이용하여 Chat GPT 연동하기 위해 아래와 같은 환경을 구성할 수 있어요
+### Spring AI의 ChatClient를 이용하여 Chat GPT 연동하기 위해 아래와 같은 환경을 구성할 수 있어요.
 
 ```java
 
@@ -176,17 +183,17 @@ public class BasicChatService {
 
 > 위 TODO를 모두 구현하셨다면, 아래 작성된 예제 코드와 비교해보세요
 
-- Step1 예제 코드: step1/basic-chat-client-example
-- Step2 예제 코드: step2/role-based-chat-client-example
-- Step3 예제 코드: step3/sort-delivery-address-with-spring-ai-exmaple
+- [Step1 예제 코드](https://github.com/team-project-tutorial/spring-ai-tutorial/tree/step1/basic-chat-client-example): step1/basic-chat-client-example
+- [Step2 예제 코드](https://github.com/team-project-tutorial/spring-ai-tutorial/tree/step2/role-based-chat-client-example): step2/role-based-chat-client-example
+- [Step3 예제 코드](https://github.com/team-project-tutorial/spring-ai-tutorial/tree/step3/sort-delivery-address-with-spring-ai-example): step3/sort-delivery-address-with-spring-ai-example
 
 ---
 
-# 참고 자료
+## 참고 자료
 
-[Spring AI Reference Docs](https://docs.spring.io/spring-ai/reference/)
-[Spring AI Chat Client Docs](https://docs.spring.io/spring-ai/reference/api/chatclient.html)
-[Open AI developer docs](https://platform.openai.com/docs/overview)
+- [Spring AI Reference Docs](https://docs.spring.io/spring-ai/reference/)
+- [Spring AI Chat Client Docs](https://docs.spring.io/spring-ai/reference/api/chatclient.html)
+- [Open AI developer docs](https://platform.openai.com/docs/overview)
 
 ![low-level OpenAiAPi Class Diagram](https://docs.spring.io/spring-ai/reference/_images/openai-chat-api.jpg)
 ![low-lebv](https://docs.spring.io/spring-ai/reference/_images/spring-ai-message-api.jpg)
